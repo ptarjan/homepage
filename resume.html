@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Paul Tarjan's Resume</title>
+        <!-- Inspired by http://matthewlevine.com/resume -->
+        <style>
+html {
+    line-height:    1.5em;
+    font-family:    Palatino,"Palatino Linotype","Times New Roman",serif;
+}
+.hresume {
+    width:      760px;
+    margin:     auto;
+}
+.hresume h2 {
+    border-top:     2px solid #333;
+    border-bottom:  1px solid #666;
+    font-size:      1em;
+    font-weight:    bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin:         2em 0 1em;
+    padding:        4px 0 3px;
+    text-shadow:    3px 3px 10px #AAAAAA;
+    text-align:     center;
+}
+ul, ol, li {
+    padding:    0;
+    margin:     0;
+}
+a {
+    color:              black;
+    text-decoration:    none;
+    border-bottom:      1px dotted;
+}
+a:hover {
+    border-bottom:      1px solid;
+}
+abbr {
+    border: 0;
+}
+.author {
+    text-align: center;
+}
+.author img {
+    float:  right;
+}
+h2 {
+    clear:  both;
+}
+.experience .description li {
+    margin-left:   3em;
+}
+.dates {
+    float:  right;
+}
+.dates {
+    min-width:  171px;
+    max-width:  300px;
+}
+li.experience {
+    margin-top: 1em;
+    list-style: none;
+}
+li.education, .summary li, .publications li, .awards li {
+    list-style: none;
+}
+.education .location {
+    font-style:     italic;
+}
+.experience .title {
+    font-weight:    bold;
+}
+.experience .summary .org, .experience .summary .fn {
+    font-style:    italic;
+}
+.publications li, .skills dt {
+    margin-top: 0.5em;
+}
+.skills li {
+    list-style: circle;
+}
+.skills ul {
+    margin-top:     0px;
+    margin-bottom:  0px;
+}
+.summary li, .awards li {
+    list-style: circle;
+    list-style-position: inside;
+}
+        </style>
+        <style media="print">
+a {
+    text-decoration: none;
+    border: 0;
+}
+body {
+    line-height: 1.25em;
+    font-size: 10pt;
+}
+.hresume h2 {
+    margin: 1em 0 0.5em;
+}
+.hresume {
+    width: 100%;
+}
+#contact {
+    display:none;
+}
+        </style>
+    </head>
+    <body>
+        <div class="hresume">
+
+            <h2 id="contact">Contact</h2>
+
+            <div class="vcard author"> <!-- this should be address but firefox chokes on it -->
+                <!-- <img src="http://www.gravatar.com/avatar/f0bc3bb52b8515654cda174918cf9d3b?s=100"> -->
+                <a id="paul-tarjan" class="fn url uid" href="http://paultarjan.com">Paul Tarjan</a>
+                <div class="adr">
+                    <span class="locality">San Jose</span>,
+                    <span class="region">CA</span>
+                    <span class="postal-code">95134</span>
+                </div>
+                <a href="tel:+1-636-674-9464" class="tel" title="+16366749464">(MEM) ORI-ZING</a>
+                <br/> <!-- I hate brs but what can I do without an extra div? -->
+                <a class="email" href="mailto:resume@paultarjan.com">resume@paultarjan.com</a>
+            </div>
+
+            <h2>Summary</h2>
+
+            <ul class="summary"><li>
+                I'm a Jack-Of-All-Trades <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">Hacker</a>; from drivers to algorithms to middleware to web dev, I love it all </li><li> My main technology interests are <a href="http://www.w3.org/TR/html5/">web</a> <a href="http://jquery.com">"stuff"</a> and <a href="http://python.org">high</a> <a href="http://php.net">level</a> <a href="http://java.com">languages</a>
+            </li><li>
+                I'm a great prototyper, who can then take it all the way to launch
+            </li><li>
+                I'm not just a technologist, I want to love the product I'm building; then I'll pour my heart and soul into it
+            </li></ul>
+
+            <h2>Education</h2>
+
+            <ol class="vcalendar">
+                <li class="education vevent">
+                <div class="summary">
+                    <div class="dates">
+                        <abbr class="dtstart">2005</abbr> - <abbr class="dtend">2007</abbr>
+                    </div>
+                    MSc <a href="http://www-cs.stanford.edu/">Computer Science</a> - GPA 3.83 / 4.00
+                </div>
+                <div class="location">
+                    <a class="url org" href="http://stanford.edu">Stanford University</a>
+                </div>
+                </li>
+                <li class="education vevent">
+                <div class="summary">
+                    <div class="dates">
+                        <abbr class="dtstart">2001</abbr> - <abbr class="dtend">2005</abbr>
+                    </div>
+                    BSc Honours <a href="http://math.ucalgary.ca/undergrad/programs/pure-math">Pure Math</a> - GPA 3.91 / 4.00
+                    <div class="location">
+                        <a class="url org" href="http://ucalgary.ca">University of Calgary</a>
+                    </div>
+                </div>
+                </li>
+                <li class="education vevent">
+                <div class="summary">
+                    <div class="dates">
+                        <abbr class="dtstart">2001</abbr> - <abbr class="dtend">2005</abbr>
+                    </div>
+                    BSc Honours <a href="http://www.cpsc.ucalgary.ca/">Computer Science</a> - GPA 3.91 / 4.00
+                    <div class="location">
+                        <a class="url org" href="http://ucalgary.ca">University of Calgary</a>
+                    </div>
+                </div>
+                </li>
+            </ol>
+
+            <h2>Work Experience</h2>
+
+            <ol class="vcalendar">
+                <li class="experience vevent">
+                    <div class="vcard summary">
+                        <div class="dates">
+                            <abbr class="dtstart" title="2010-03">March 2010</abbr> - <abbr class="dtend">present</abbr>
+                        </div>
+                        <div class="title">?</div>
+                        <a class="url org" href="http://facebook.com/">Facebook</a>
+                        <a class="include" title="Paul Tarjan" href="#paul-tarjan"></a>
+                    </div>
+                    <ul class="description"><li>
+                        ?
+                    </li></ul>
+                </li>
+
+                <li class="experience vevent">
+                    <div class="vcard summary">
+                        <div class="dates">
+                            <abbr class="dtstart" title="2007-05">May 2007</abbr> - <abbr class="dtend" title="2010-03">March 2010</abbr> 
+                        </div>
+                        <div class="title">Senior Technical Yahoo!</div>
+                        <a class="url org" href="http://yahoo.com">Yahoo! Inc</a> - 
+                        <a class="url org" href="http://search.yahoo.com">Search</a>
+                        <a class="include" title="Paul Tarjan" href="#paul-tarjan"></a>
+                    </div>
+                    <ul class="description"><li>
+                        Founded <a href="http://developer.yahoo.com/searchmonkey">SearchMonkey</a> team with 
+                        <span class="vcard"><a class="fn url" href="http://www.linkedin.com/in/amitkumar">Amit Kumar</a></span>
+                    </li><li>
+                        <a href="http://www.slideshare.net/ptarjan/how-to-be-a-hacker">Lectured</a>, <a href="http://paulisageek.com/hacku">organized</a>, judged, and worked closely with <span class="vcard"><a class="fn url" href="http://lerdorf.org">Rasmus Lerdorf</a></span> for Yahoo! <a href="http://developer.yahoo.com/hacku">HackU</a>
+                    </li><li>
+                        Architected and built prototype for SearchMonkey in 2 months
+                    </li><li>
+                        Productionized SearchMonkey code for public release
+                    </li><li>
+                        <a href="http://www.slideshare.net/ptarjan/semantic-searchmonkey">Speaker</a> and <a href="http://www.youtube.com/watch?v=8mlO3rsKeZY">evangelist</a> for Y! Academic Relations
+                    </li><li>
+                        Technical Lead for SearchMonkey team
+                    </li><li>
+                        Designed and implemented many features for Yahoo’s site search product
+                    </li></ul>
+                </li>
+
+                <li class="experience vevent">
+                    <div class="vcard summary">
+                        <div class="dates">
+                            <abbr class="dtstart" title="2006-01">January 2006</abbr> - <abbr class="dtend" title="2007-05">May 2007</abbr>
+                        </div>
+                        <div class="title">Research Assistant and Teaching Assistant</div>
+                        <a class="url org" href="http://stanford.edu">Stanford University</a> - 
+                        <a class="url org" href="http://yuba.stanford.edu">High Performance Networking Group</a>
+                        (<a class="url fn" href="http://yuba.stanford.edu/~nickm/">Dr. Nick McKeown</a>)
+                        <a class="include" title="Paul Tarjan" href="#paul-tarjan"></a>
+                    </div>
+                    <ul class="description"><li>
+                        Development on a graphical router project, <a href="http://yuba.stanford.edu/vns/clack/">clack</a>
+                    </li><li>
+                        Created <a href="http://yuba.stanford.edu/JEthereal">Java front-end for network packet display</a>
+                    </li></ul>
+                </li>
+
+                <li class="experience vevent">
+                    <div class="vcard summary">
+                        <div class="dates">
+                            <abbr class="dtstart" title="2005-05">May 2005</abbr> - <abbr class="dtend" title="2005-09">Sept 2005</abbr>
+                        </div>
+                        <div class="title">Programmer - Optimizations</div>
+                        <a class="url org" href="http://code.google.com/soc/">Google Summer of Code</a>
+                        <a class="include" title="Paul Tarjan" href="#paul-tarjan"></a>
+                    </div>
+                    <ul class="description"><li>
+                        <a href="http://seclists.org/nmap-hackers/2005/8">Worked on</a> an open source port scanner for Linux (<a href="http://nmap.org/">Nmap</a>)
+                    </li><li>
+                    Responsible for <a href="http://insecure.org/stf/Nmap-4.00-Release.html">terminal interaction</a>, optimizing code and bug hunting; right-hand man to 
+                        <span class="vcard"><a class="fn url" href="http://insecure.org/fyodor/">Fyodor</a>
+                    </li></ul>
+                </li>
+                
+                <li class="experience vevent">
+                    <div class="vcard summary">
+                        <div class="dates">
+                            <abbr class="dtstart" title="2004-05">May 2004</abbr> - <abbr class="dtend" title="2005-09">Sept 2005</abbr>
+                        </div>
+                        <div class="title">Manager and Director of Textbook Publication</div>
+                        <a class="url org" href="http://ucalgary.ca">University of Calgary</a> -
+                        <a class="url org" href="http://math.ucalgary.ca">Department of Mathematics</a>
+                        (<a class="url fn" href="http://enel.ucalgary.ca/profiles/aiden-bruen">Dr. Aiden Bruen</a>)
+                        <a class="include" title="Paul Tarjan" href="#paul-tarjan"></a>
+                    </div>
+                    <ul class="description"><li>
+                        Managed and directed the development of a <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471653179.html">University level Mathematics textbook in Cryptography, Information Theory, and Coding.</a>
+                    </li><li>
+                        Wrote several chapters in the book and edited / typeset all others.
+                    </li></ul>
+                </li>
+
+                <li class="experience vevent">
+                    <div class="vcard summary">
+                        <div class="dates">
+                            <abbr class="dtstart" title="2003-05">May 2003</abbr> - <abbr class="dtend" title="2003-09">Sept 2003</abbr>
+                        </div>
+                        <div class="title">Programmer - User Interfaces</div>
+                        <a class="url org" href="http://ucalgary.ca">University of Calgary</a> -
+                        <a class="url org" href="http://cpsc.ucalgary.ca">Department of Computer Science</a>
+                        (<a class="url fn" href="http://pages.cpsc.ucalgary.ca/~boyd/">Dr. Jeff Boyd</a>)
+                        <a class="include" title="Paul Tarjan" href="#paul-tarjan"></a>
+                    </div>
+                    <ul class="description"><li>
+                        Part of the programming and designing team for <a href="http://pages.cpsc.ucalgary.ca/~boyd/pmwiki/pmwiki.php?n=Main.Caml-gallery">CaML</a> (Camera Mark-up Language)
+                    </li></ul>
+                </li>
+            </ol>
+                                             
+            <h2>Publications</h2>
+
+            <ul class="publications"><li>
+                Dan Wendlandt, Martin Casado, Paul Tarjan, Nick McKeown: <cite>The Clack graphical router: visualizing network software.</cite> SOFTVIS 2006: 7-15
+            </li><li>
+                J. Boyd, M. Sayles, L. Olsen, P. Tarjan, <cite>"Content Description Servers for Networked Video Surveillance"</cite>, in proceedings of IEEE International Conference on Information and Technology: Coding and Computing, ITCC 2004 April 5-7, 2004, Las Vegas, Nevada.
+            </li><li>
+                J. Boyd, M. Sayles, L. Olsen, and P. Tarjan, <cite>"Internet Broadcast of Hockey: A Scale Prototype"</cite>, proceedings of SPIE Internet Imaging V, San Jose, CA, January 2004, p193-201.
+            </li><li>
+                A. Bruen and M. Forcinito (2004). <cite>Cryptography, Information Theory, and Error Correction.</cite>  Wiley-Interscience. [wrote 3 chapters and edited / typeset textbook]
+            </li></ul>
+
+            <h2>Computer Skills</h2>
+
+            <dl class="skills">
+                <dt>Very Knowledgeable:</dt>
+                <dd><ul><li>
+                    HTML4, HTML5, CSS2, CSS3, Javascript, DOM, JQuery, YUI2, YUI3, Ajax
+                    </li><li>
+                    Django, Python, PHP, JSON, XML, YAML, REST, OpenID, OAuth
+                    </li><li>
+                    C, C++, Java, Hadoop, OpenGL
+                    </li><li>
+                    Git, SVN, CVS, MySQL, SQL, UNIX/Linux
+                    </li></ul></dd>
+                <dt>Familiar:</dt>
+                <dd><ul><li>
+                    Perl, Lisp, Haskell, Almost everything else :)
+                </li></ul>
+                <dt>"Pet Projects":</dt>
+                <dd>
+                    See <a href="http://paulisageek.com/projects">http://paulisageek.com/projects</a>
+                </dd>
+                <dt>Past School Projects:</dt>
+                <dd><ul><li>
+                    Wrote a ray tracer from scratch (without using external image / math libraries). 
+                    </li><li>
+                    Implemented an automated traffic router for metropolitan areas (Undergrad Thesis)
+                    </li><li>
+                    Created a teaching tool for learning Bezier, B-Spline, and NURBS curves; as well as surface subdivision. 
+                    </li><li>
+                    Built a distributed system framework for a "mars rover" communication simulation.
+                    </li><li>
+                    Created a window manager on top of DOS, written entirely in C, using a Linear Frame Buffer. Responsible for creating all the interrupt handlers (mouse, microphone, timer).
+                    </li><li>
+                    Wrote a framework for a transactional database in memory, using Java. With support for rollbacks, saves, loads, and crashes.
+                </li></ul></dd>
+            </dl>
+
+            <h2>Awards & Accomplishments</h2>
+
+            <ol class="awards"><li>
+                Hackday winner x2 - <a href="http://webnumbr.com">webnumbr</a> + <a href="http://blog.paulisageek.com/2009/08/we-won-hack-day.html">Internal Secret Project</a> - Yahoo! (<span class="dtstart">2009</a>)
+            </li><li>
+                <a href="http://www.flickr.com/photos/ptarjan/3722732148/">Superstar Award</a> - SearchMonkey - <a href="http://www.flickr.com/photos/ptarjan/3044316032/">Yahoo!</a> (<span class="dtstart">2008</span>)
+            </li><li>
+                Search Division "You Rock" Award - Yahoo! (<span class="dtstart">2008</span>)
+            </li><li>
+                NSERC PGS - Didn’t accept award (<span class="dtstart">2005</span>)
+            </li><li>
+                Rhodes Scholarship Finalist - Western Canada (<span class="dtstart">2005</span>)
+            </li><li>
+                NSERC USRA - Research Grant (<span class="dtstart">2003</span> - <span class="dtend">2005</span>)
+            </li></ol>
+
+        </div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-149816-13");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+
+    </body>
+</html>

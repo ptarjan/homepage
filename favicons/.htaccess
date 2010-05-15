@@ -1,0 +1,4 @@
+ExpiresActive On
+# 1 WEEK
+ExpiresDefault A604800
+Header append Cache-Control "public"
