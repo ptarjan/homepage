@@ -10,7 +10,7 @@ for a in soup('a', rel='me'):
     for img in a('img'):
         src = img['src']
         if 'http://' in src:
-            fname = src.replace('/', '-').replace('-ico', '.ico')
+            fname = urllib2.urlparse.urlparse(src).netloc + '.ico'
             if os.path.isfile(fname):
                 print 'Skipping %s' % fname
                 continue

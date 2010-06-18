@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paul Tarjan's Web Home</title>
+<link rel="openid.server" href="http://www.myopenid.com/server" />
+<link rel="openid.delegate" href="http://ptarjan.myopenid.com/" />
+<link rel="openid2.local_id" href="http://ptarjan.myopenid.com" />
+<link rel="openid2.provider" href="http://www.myopenid.com/server" />
+<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=ptarjan.myopenid.com" />
+<link rel="stylesheet" href="style.css" />
+<style>
+.photo {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 14px;
+}
+body {
+    width: 960px;
+    margin: 5px auto;
+}
+#menu {
+    text-align: center;
+}
+#menu a {
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+}
+#menu a:hover {
+    background: #e7e7e7;
+}
+h1.fn {
+    margin-top:0;
+    border:0;
+}
+h2 {
+    overflow: hidden;
+}
+</style>
+<body class="vcard">
+<div id="menu">
+<a href="mailto:web@paultarjan.com" class="email">Contact</a>
+<a href="resume">Resume</a>
+<a href="http://paulisageek.com/ppp">Projects</a>
+</div>
+
+<h1 class="fn">Paul Tarjan</h1>
+
+<img src="paul.jpg" class="photo" alt="Paul Tarjan" />
+
+<div id="recent">
+
+<h2 style="margin-top:0px"><a href="http://twitter.com/ptarjan">Tweet</a></h2>
+<span id="last_tweet">
+[<a href="http://twitter.com/ptarjan/status/16335384788">Jun 16</a>] (blog post likes) / (linter likes) ~= 3. I wonder if that is proportional to clickthrough... <a href="http://fb.me/zFRnz7ky">http://fb.me/zFRnz7ky</a> </span>
+
+<h2><a rel="me" class="url" href="http://blog.paulisageek.com">Blog</a></h2>
+<span id="last_blog">
+[<a href="http://feedproxy.google.com/~r/paulisageek/~3/SzFrWByxKYA/facebook-url-linter.html">Jun 10</a>] Debugging URLs with the Facebook URL Linter : Republished from Facebook Developer&#8217;s Blog
+
+A primary design goal of the Open Graph protocol &#8211; which enables any Web page to become...</span> <a href="http://blog.paulisageek.com">Read More</a>
+
+</div>
+
+<div style="clear:left"></div>
+
+<style>
+* {
+    margin: 0; padding: 0;
+}
+ul.rel-me img {
+    height: 16px;
+    width: 16px;
+    border: 0;
+}
+ul.rel-me li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}
+ul.rel-me a {
+    padding: 10px;
+    text-decoration: none;
+}
+ul.rel-me a img {
+    margin-right: 5px;
+}
+ul.rel-me a:hover {
+    background: #e7e7e7;
+}
+a:visited {
+    color: blue;
+}
+</style>
+<h2>My Other Internet Things</h2>
+
+<ul class="rel-me">
+
+    <li>
+        <a rel="me" class="url" href="http://blog.paulisageek.com/">
+            <img src="/favicons/http:--paulisageek.com-favicon.ico"/>blog
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.blogger.com/profile/10076655978910859386">
+            <img src="/favicons/http:--www.blogger.com-favicon.ico"/>blogger profile
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://brightkite.com/people/ptarjan">
+            <img src="/favicons/http:--brightkite.com-favicon.ico"/>brightkite
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://claimid.com/ptarjan">
+            <img src="/favicons/http:--claimid.com-favicon.ico"/>claimid
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.crunchbase.com/person/paul-tarjan">
+            <img src="/favicons/http:--www.crunchbase.com-images-favicon.png"/>crunchbase
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://delicious.com/ptarjan">
+            <img src="/favicons/http:--delicious.com-favicon.ico"/>delicious
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://digg.com/users/paralax/">
+            <img src="/favicons/http:--digg.com-favicon.ico"/>digg
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.disqus.com/people/ptarjan">
+            <img src="/favicons/http:--www.disqus.com-favicon.ico"/>disqus
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.dopplr.com/traveller/ptarjan">
+            <img src="/favicons/http:--www.dopplr.com-favicon.ico"/>dopplr
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.evite.com/pages/gt/people/view.jsp?username=ptarjan">
+            <img src="/favicons/http:--www.evite.com-images-favicon.ico"/>evite
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.facebook.com/paul.tarjan">
+            <img src="/favicons/http:--www.facebook.com-favicon.ico"/>facebook
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.flickr.com/photos/ptarjan/">
+            <img src="/favicons/http:--www.flickr.com-favicon.ico"/>flickr
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.formspring.me/ptarjan">
+            <img src="/favicons/http:--www.formspring.me-favicon.ico"/>formspring
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://foursquare.com/user/-55130">
+            <img src="/favicons/http:--foursquare.com-favicon.ico"/>foursquare
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://friendfeed.com/ptarjan">
+            <img src="/favicons/http:--friendfeed.com-favicon.ico"/>friendfeed
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://github.com/ptarjan">
+            <img src="/favicons/http:--github.com-favicon.ico"/>github
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.google.com/profiles/ptarjan">
+            <img src="/favicons/http:--www.google.com-favicon.ico"/>google profile
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.google.com/reader/shared/18104599723933929465">
+            <img src="/favicons/http:--www.google.com-favicon.ico"/>google reader
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://en.gravatar.com/ptarjan">
+            <img src="/favicons/http:--en.gravatar.com-favicon.ico"/>gravatar
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.hulu.com/profiles/ptarjan">
+            <img src="/favicons/http:--www.hulu.com-favicon.ico"/>hulu
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://identi.ca/ptarjan">
+            <img src="/favicons/http:--identi.ca-favicon.ico"/>identi.ca
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.last.fm/user/ptarjan/">
+            <img src="/favicons/http:--www.last.fm-favicon.ico"/>last.fm
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.linkedin.com/in/paultarjan">
+            <img src="/favicons/http:--www.linkedin.com-favicon.ico"/>linkedin
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.mybloglog.com/buzz/members/ptarjan/">
+            <img src="/favicons/http:--www.mybloglog.com-favicon.ico"/>mybloglog
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://ptarjan.myopenid.com/">
+            <img src="/favicons/http:--ptarjan.myopenid.com-favicon.ico"/>myopenid
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.myspace.com/ptarjan">
+            <img src="/favicons/http:--www.myspace.com-favicon.ico"/>myspace
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://paulisageek.com/">
+            <img src="/favicons/http:--paulisageek.com-favicon.ico"/>paulisageek
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://picasaweb.google.com/ptarjan">
+            <img src="/favicons/http:--picasaweb.google.com-favicon.ico"/>picassa
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://ptarjan.myplaxo.com/">
+            <img src="/favicons/http:--ptarjan.myplaxo.com-favicon.ico"/>plaxo
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://reddit.com/user/ptarjan">
+            <img src="/favicons/http:--reddit.com-favicon.ico"/>reddit
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.slideshare.net/ptarjan">
+            <img src="/favicons/http:--www.slideshare.net-favicon.ico"/>slideshare
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://sourceforge.net/users/ptarjan">
+            <img src="/favicons/http:--sourceforge.net-favicon.ico"/>sourceforge
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://stackoverflow.com/users/90025">
+            <img src="/favicons/http:--stackoverflow.com-favicon.ico"/>stackoverflow
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://technorati.com/people/ptarjan">
+            <img src="/favicons/http:--technorati.com-favicon.ico"/>technorati
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://ptarjan.tumblr.com/">
+            <img src="/favicons/http:--ptarjan.tumblr.com-favicon.ico"/>tumblr
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://twitter.com/ptarjan">
+            <img src="/favicons/http:--twitter.com-favicon.ico"/>twitter
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.vimeo.com/ptarjan">
+            <img src="/favicons/http:--www.vimeo.com-favicon.ico"/>vimeo
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://answers.yahoo.com/my/profile?show=CKLS7wpLaa">
+            <img src="/favicons/http:--answers.yahoo.com-favicon.ico"/>yahoo answers
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://profiles.yahoo.com/u/KOT52K332INRF7PSYN5XT6XU7Y">
+            <img src="/favicons/http:--profiles.yahoo.com-favicon.ico"/>yahoo profile
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://video.yahoo.com/people/4344737">
+            <img src="/favicons/http:--video.yahoo.com-favicon.ico"/>yahoo video
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://www.yelp.com/user_details?userid=rqhIlxi3frY9g01nMH-OPQ">
+            <img src="/favicons/http:--www.yelp.com-favicon.ico"/>yelp
+        </a>
+    </li>
+    
+    <li>
+        <a rel="me" class="url" href="http://youtube.com/user/ptarjan">
+            <img src="/favicons/http:--youtube.com-favicon.ico"/>youtube
+        </a>
+    </li>
+    </ul>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-149816-13");
+    pageTracker._trackPageview();
+} catch(err) {}</script>

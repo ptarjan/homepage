@@ -57,8 +57,8 @@ foreach ($sites as $key => $site) {
 
         $site['favicon'] = "{$parsed['scheme']}://{$parsed['host']}/favicon.ico";
     }
-    $fname = str_replace('/', '-', $site['favicon']);
-    $fname = str_replace('-ico', '.ico', $fname);
+    $parsed_favicon = parse_url($site['favicon']);
+    $fname = $parsed_favicon['host'].'.ico';
     if (file_exists('favicons/'.$fname))
         $site['favicon'] = '/favicons/'.$fname;
 
