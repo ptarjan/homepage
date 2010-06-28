@@ -7,8 +7,11 @@ ul.rel-me img {
     width: 16px;
     border: 0;
 }
+ul.rel-me {
+    text-align: justify;
+}
 ul.rel-me li {
-    float: left;
+    display: inline-block;
     list-style: none;
     margin: 5px;
     padding: 0;
@@ -22,9 +25,6 @@ ul.rel-me a img {
 }
 ul.rel-me a:hover {
     background: #e7e7e7;
-}
-a:visited {
-    color: blue;
 }
 </style>
 <h2>My Other Internet Things</h2>
