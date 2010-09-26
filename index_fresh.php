@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Paul Tarjan's Web Home</title>
+<title>Paul Tarjan</title>
 <link rel="openid.server" href="http://www.myopenid.com/server" />
 <link rel="openid.delegate" href="http://ptarjan.myopenid.com/" />
 <link rel="openid2.local_id" href="http://ptarjan.myopenid.com" />
