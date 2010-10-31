@@ -120,6 +120,7 @@ function smart_substr($str, $start, $length = FALSE, $minword = 3) {
     return $sub . (($len < strlen($str)) ? '...' : '');
 }
 
+$post = preg_replace('/<style>[^<]*<\/style>/', '', $post);
 $post = smart_substr(strip_tags($post), 0, 140);
 print '[<a href="' . $href  . '">' . date('M j', $date) . '</a>] '.$title.' : '.$post;
 ?>
