@@ -37,8 +37,7 @@
 
 -   http://twitter.com/ptarjan
 
--   href: http://www.blogger.com/profile/10076655978910859386
-    name: blogger profile
+-   http://www.blogger.com/profile/10076655978910859386
 
 -   http://www.disqus.com/people/ptarjan
 
@@ -102,3 +101,7 @@
 -   href: http://ptarjan.posterous.com/
     name: posterous
     favicon: http://ptarjan.posterous.com/images/favicon.png
+
+-   href: http://about.me/ptarjan
+    name: about.me
+    favicon: http://wac.2659.edgecastcdn.net/802659/production74/images/icons/favicon.ico
