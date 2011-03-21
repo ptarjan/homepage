@@ -7,6 +7,7 @@
 <link rel="openid2.local_id" href="http://ptarjan.myopenid.com" />
 <link rel="openid2.provider" href="http://www.myopenid.com/server" />
 <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=ptarjan.myopenid.com" />
+<meta property="og:image" content="http://paultarjan.com/paul.jpg" />
 <link rel="stylesheet" href="style.css" />
 <style>
 .photo {
