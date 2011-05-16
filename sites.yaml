@@ -30,6 +30,7 @@
 
 -   href: http://ptarjan.tumblr.com/
     name: tumblr
+    favicon: http://www.tumblr.com/favicon.ico
 
 -   http://reddit.com/user/ptarjan
 
@@ -46,12 +47,13 @@
 -   href: http://www.evite.com/pages/gt/people/view.jsp?username=ptarjan 
     favicon: http://www.evite.com/images/favicon.ico
 
--   http://www.facebook.com/paul.tarjan
+-   http://www.facebook.com/pt
 
 -   http://www.flickr.com/photos/ptarjan/
+    favicon: http://l.yimg.com/g/favicon.ico
 
 -   href: http://www.google.com/profiles/ptarjan
-    name: google profile
+    name: google
 
 -   href: http://www.google.com/reader/shared/18104599723933929465
     name: google reader
@@ -77,11 +79,8 @@
 
 -   http://youtube.com/user/ptarjan
 
--   href: http://video.yahoo.com/people/4344737
-    name: yahoo video
-
 -   href: http://profiles.yahoo.com/u/KOT52K332INRF7PSYN5XT6XU7Y
-    name: yahoo profile
+    name: yahoo
 
 -   http://sourceforge.net/users/ptarjan
 
@@ -105,3 +104,7 @@
 -   href: http://about.me/ptarjan
     name: about.me
     favicon: http://wac.2659.edgecastcdn.net/802659/production74/images/icons/favicon.ico
+
+-   href: bitcoin:1MBU85YWqXgZjpMzh9VpwL7LCQk8wy6eXK
+    name: bitcoin
+    favicon: http://upload.wikimedia.org/wikipedia/commons/5/50/Bitcoin.png
