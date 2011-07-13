@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteRule ^resume/?$ /resume.html [NC,L]
+RewriteRule ^resume/?$ /resume/index.html [NC,L]
 RewriteRule ^cv/?$ /resume [R=302,NC,L]
 
 RewriteCond %{REQUEST_FILENAME}.php -f
