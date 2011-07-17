@@ -1,7 +1,9 @@
-RewriteEngine On
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-RewriteRule ^resume/?$ /resume.html [NC,L]
-RewriteRule ^cv/?$ /resume [R=302,NC,L]
+  RewriteRule ^resume/?$ /resume.html [NC,L]
+  RewriteRule ^cv/?$ /resume [R=302,NC,L]
 
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^(.*)$ $1.php
+</IfModule>

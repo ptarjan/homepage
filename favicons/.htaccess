@@ -1,4 +1,9 @@
-ExpiresActive On
-# 1 WEEK
-ExpiresDefault A604800
-Header append Cache-Control "public"
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # 1 WEEK
+  ExpiresDefault A604800
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header append Cache-Control "public"
+</IfModule>
