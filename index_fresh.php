@@ -56,7 +56,7 @@ h2 {
 <h2 style="margin-top:0px"><a href="http://twitter.com/ptarjan">Tweet</a></h2>
 <span id="last_tweet">
 <?php
-date_default_timezone_set('UTF8');
+date_default_timezone_set('UTC');
 $data = @json_decode(file_get_contents("http://twitter.com/statuses/user_timeline/ptarjan.json?count=20"), TRUE);
 if (!$data) {
     $data = array(array('text' => "Twitter API is down..."));
