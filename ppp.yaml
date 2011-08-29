@@ -1,0 +1,43 @@
+- href: http://nerdiversary.com
+  name: Nerdiversary
+  desc: Celebrate your 1,000,000 second alive.
+
+- href: http://paulisageek.com/imdb-250-netflix
+  name: IMDB 250 on Netflix Instant
+  desc: Watch every great movie.
+
+- href: http://paulisageek.com/json_validator/
+  name: JSON Validator
+  desc: For testing jQuery's getJSON function.
+
+- href: http://paulisageek.com/compare/cpu/
+  name: Price / Performance for CPUs
+  desc: Get the best bang for your buck.
+
+- href: http://www.stdicon.com
+  name: stdicon
+  desc: A collection of mimetype icons hosted for hotlinking.
+
+- href: http://yaml-online-parser.appspot.com
+  name: Online YAML Parser
+  desc: It takes in YAML and outputs JSON.
+
+- href: http://webnumbr.com
+  name: WebNumbr
+  desc: Watch any number on any webpage.
+
+- href: http://text-twist.appspot.com
+  name: Text Twist Solver
+  desc: Uses the exact TextTwist dictionary.
+
+- href: http://blog.paulisageek.com
+  name: My Blog
+  desc: Updated less often than I would like and more often than I should.
+
+- href: http://paulisageek.com/slidemonkey/
+  name: Slideshow Generator
+  desc: Automatic slideshow generator
+
+- href: http://paulisageek.com/nodeSelector
+  name: nodeSelector
+  desc: A javascript library for helping a user select a node from the dom

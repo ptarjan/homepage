@@ -16,7 +16,7 @@
     height: 300px;
     float: left;
     margin-right: 30px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 body {
     width: 960px;
@@ -45,91 +45,13 @@ h2 {
 <div id="menu">
 <a href="mailto:web@paultarjan.com" class="email">Contact</a>
 <a href="resume">Resume</a>
-<a href="http://paulisageek.com/ppp">Projects</a>
 </div>
 
 <h1 class="fn">Paul Tarjan</h1>
 
 <img src="paul.jpg" class="photo" alt="Paul Tarjan" />
 
-<div id="recent">
-
-<h2 style="margin-top:0px"><a href="http://twitter.com/ptarjan">Tweet</a></h2>
-<span id="last_tweet">
-<?php
-date_default_timezone_set('UTC');
-$data = @json_decode(file_get_contents("http://twitter.com/statuses/user_timeline/ptarjan.json?count=20"), TRUE);
-if (!$data) {
-    $data = array(array('text' => "Twitter API is down..."));
-}
-$tweet = "";
-foreach ($data as $entry) {
-    if ($entry['text'][0] != '@') {
-        $date = strtotime($entry['created_at']);
-        $tweet = $entry['text'];
-        break;
-    }
-}
-$in=array(
-'`((?:https?|ftp)://\S+)`si',
-'`((?<!//)(www\.\S+))`si',
-'`(^|\s)@(\w+)`si',
-'`(^|\s)#(\w+)`si',
-);
-$out=array(
-'<a href="$1">$1</a> ',
-'<a href="http://$1">$1</a>',
-'\1<a href="http://twitter.com/\2">@\2</a>',
-'\1<a href="http://twitter.com/search?q=%23\2">#\2</a>',
-);
-$tweet = preg_replace($in,$out,$tweet);
-print '[<a href="http://twitter.com/ptarjan/status/' . $entry['id'] . '">' . date('M j', $date) . '</a>] ' . $tweet;
-?>
-</span>
-
-<h2><a rel="me" class="url" href="http://blog.paulisageek.com">Blog</a></h2>
-<span id="last_blog">
-<?php
-$data = @simplexml_load_string(file_get_contents("http://feeds.feedburner.com/paulisageek"));
-if (!$data) $data == "RSS is down...";
-
-$post = $data->entry[0]->content;
-$title = $data->entry[0]->title;
-$date = strtotime($data->entry[0]->published);
-$href = 'http://blog.paulisageek.com';
-foreach ($data->entry[0]->link as $link) {
-    if ($link['rel'] == 'alternate' && $link['type'] == 'text/html') {
-        $href = $link['href'];
-    }
-}
-
-function smart_substr($str, $start, $length = FALSE, $minword = 3) {
-    $sub = '';
-    $len = 0;
-    if ($lenth === FALSE) $length = strlen($str);
-   
-    foreach (explode(' ', $str) as $word)
-    {
-        $part = (($sub != '') ? ' ' : '') . $word;
-        $sub .= $part;
-        $len += strlen($part);
-       
-        if (strlen($word) > $minword && strlen($sub) >= $length)
-        {
-            break;
-        }
-    }
-   
-    return $sub . (($len < strlen($str)) ? '...' : '');
-}
-
-$post = preg_replace('/<style>[^<]*<\/style>/', '', $post);
-$post = smart_substr(strip_tags($post), 0, 140);
-print '[<a href="' . $href  . '">' . date('M j', $date) . '</a>] '.$title.' : '.$post;
-?>
-</span> <a href="http://blog.paulisageek.com">Read More</a>
-
-</div>
+<?php require "ppp.php" ?>
 
 <div style="clear:left"></div>
 

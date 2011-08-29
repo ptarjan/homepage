@@ -30,7 +30,7 @@ ul.rel-me a:hover {
 <h2>My Other Internet Things</h2>
 
 <?php
-require('spyc.php');
+require_once('spyc.php');
 $sites = Spyc::YAMLLoad('sites.yaml');
 
 foreach ($sites as $key => $site) {
