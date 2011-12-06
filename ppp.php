@@ -5,13 +5,14 @@ li {
 </style>
 
 <h2>Paul's Pet Projects - Newest to Oldest</h2>
-  
+ 
+<!--
 <iframe 
   src="https://www.facebook.com/plugins/subscribe?href=http://www.facebook.com/pt"
   scrolling="no" frameborder="0" 
   style="border:none; overflow:hidden; width:600px; height:24px; vertical-align: top; margin-bottom: 10px" 
   allowTransparency="true"></iframe>
-
+-->
 <ul>
 <?php
 require_once('spyc.php');
