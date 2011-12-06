@@ -27,11 +27,11 @@ h1 {
     padding: 8px 0 6px;
 }
 ol li {
-    list-style :            decimal;
+    list-style : decimal;
 }
 
 ul li {
-    list-style :            none;
+    list-style : none;
 }
 
 a, a:visited {
