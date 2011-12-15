@@ -51,6 +51,12 @@ h2 {
 
 <img src="paul.jpg" class="photo" alt="Paul Tarjan" />
 
+<iframe 
+  src="https://www.facebook.com/plugins/subscribe?href=http://www.facebook.com/pt"
+  scrolling="no" frameborder="0" 
+  style="border:none; overflow:hidden; width:600px; height:24px; vertical-align: top;" 
+  allowTransparency="true"></iframe>
+
 <?php require "ppp.php" ?>
 
 <div style="clear:left"></div>
